@@ -1,0 +1,19 @@
+- form_for @user_session, :url=>user_session_path do |f|
+  = f.error_messages
+  
+  .row
+    = f.label :login
+    %br
+    = f.text_field :login
+  .row
+    = f.label :password
+    %br
+    = f.password_field :password
+  .row
+    = f.check_box :remember_me
+    = f.label :remember_me
+    = f.submit "Log In", :class => "submit"
+    
+  %p
+    Forgot your password?
+    = link_to "Get it back!", new_password_reset_path

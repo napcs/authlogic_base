@@ -1,0 +1,12 @@
+%h3 Tip:
+%p Your password is encrypted and we don't know what it is, so the only way to get it back is to reset it. Your password should be greater than six characters, and should contain at least one special character.
+
+.row
+  = f.label :password
+  %br
+  = f.password_field :password
+.row
+  = f.label :password_confirmation
+  (type it again to help you remember it!)
+  %br
+  = f.password_field :password_confirmation

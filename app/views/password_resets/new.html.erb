@@ -1,0 +1,11 @@
+<% @title = "Recover your password"%>
+
+<h1>Recover your password</h1>
+
+<p>Give us your email address and we'll send you a link to reset your password.</p>
+
+<% form_tag password_resets_path do %>
+  <label for="email">Email address</label>
+  <%= text_field_tag "email", "", :id => "email"%>
+  <%= submit_tag "Reset my password", :class => "submit" %>
+<% end %>

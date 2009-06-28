@@ -1,0 +1,45 @@
+== YOUR_APP_NAME app
+
+== Setup
+
+=== Database setup
+
+  Set up MySQL and set up root user with no password on your dev machine. Turn off MySQL when not using. This enables Rails to create databases automatically.  If you choose to set up your database any other way, you are on your own for creating the databases listed in the example yml file.
+  
+  gem install mocha
+  cp config/email.example config/email.yml
+  cp config/database.example config/database.yml
+  
+== Email setup
+Open config/email.yml and change
+
+  WEB_HOST
+
+to your full base URL for production.
+
+Change
+
+  SITE_ADMIN_EMAIL
+  
+to the site admin's email. This is where things like "contact us for support" forms should go
+
+  rake db:create:all
+  rake db:bootstrap
+  
+Run the tests
+
+  rake spec
+  cucumber
+  
+=Selenium tests
+Install Selenium to test advanced user interface features which use Javascript
+
+  sudo gem install Selenium
+  sudo gem install selenium-client -v 1.2.15
+  
+  cucumber -p selenium
+  
+
+= The Bootstrap rake task
+
+Right now the bootstrap task creates the "user" role and the "admin" role, prompts you for admin user info, creates the user, and then adds the "admin" role to the user. Modify for your own uses.

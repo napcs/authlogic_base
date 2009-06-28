@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="venue, venues, groups, meetup, facebook, yahoo" />
+  	<meta name="description" content="We help venues and meeting organizers find each other" />
+  	<title><%=@title %>YOUR_APP</title>
+		<%=stylesheet_link_tag "style.css"%>
+  
+  </head>
+
+  <body>
+
+    <div id="page">
+      
+  		<div id="banner">
+
+        <% unless flash[:notice].blank? %>
+          <div id="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+      
+      <%=yield%>
+        
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+development:
+  web_host: localhost:3000
+  email:
+    delivery_method: sendmail
+    site_admin_email: youremail@example.com
+production:
+  web_host: localhost:3000
+  email:
+    delivery_method: smtp
+    domain: example.com
+    port: 587
+    authentication: plain
+    server: smtp.gmail.com
+    site_admin_email: foo@gmail.com
+    password: 
+test:
+  web_host: localhost:3000
+  email:
+    delivery_method: test
+    site_admin_email: bphogan@gmail.com

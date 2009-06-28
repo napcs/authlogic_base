@@ -1,0 +1,10 @@
+- @title = "Set your password"
+
+%h1 Almost done...
+
+%p You'll need a password for this site. Please enter it now.
+
+- form_for(@user, :url => activate_path(@user.id), :method => :post)  do |f|
+  = f.error_messages
+  = render :partial => "password_resets/form", :locals => {:f => f}
+  = submit_tag "Start using your account!", :class => "submit"

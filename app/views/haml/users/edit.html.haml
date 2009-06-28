@@ -1,0 +1,17 @@
+.leftcol
+  %h2 Your account details
+
+  - form_for(@user) do |f|
+    .row
+      %h3= f.label :email
+      %p It's really important that you set this to a valid, working, and responsive email address.  This is never shown to anyone on the site, and it's how we will communicate with you about your account as well as any mentoring requests. 
+      
+      = f.text_field :email
+  
+    = submit_tag "Update your account", :class => "submit"
+
+.rightcol
+  %h2 Change your password  
+  - form_for(@user) do |f|
+    = render :partial => "password_resets/form", :locals => {:f => f}
+    = submit_tag "Change password", :class => "submit"

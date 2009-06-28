@@ -1,0 +1,11 @@
+<div id="leftcol">
+  
+</div>
+
+<div id="rightcol">
+  <% unless current_user %>
+    <h2>Sign in</h2>
+    <%= render :partial => "user_sessions/form" %>
+    <p>Already have an account? <%=link_to "Sign up", signup_path %>.</p>
+  <% end %>
+</div>

@@ -1,0 +1,10 @@
+- @title = "Set your password"
+
+%h1 Set your password
+
+- form_for @user, :url => password_reset_path, :method => :put do |f|
+  = f.error_messages
+  = render :partial => "password_resets/form", :locals => {:f => f}
+
+  %div
+    = submit_tag "Update password", :class => "submit"
