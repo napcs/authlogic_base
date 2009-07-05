@@ -4,9 +4,9 @@
 
 === Database setup
 
-  Set up MySQL and set up root user with no password on your dev machine. Turn off MySQL when not using. This enables Rails to create databases automatically.  If you choose to set up your database any other way, you are on your own for creating the databases listed in the example yml file.
+Set up MySQL and set up root user with no password on your dev machine. Turn off MySQL when not using. This enables Rails to create databases automatically.  If you choose to set up your database any other way, you are on your own for creating the databases listed in the example yml file.
   
-  gem install mocha
+  gem install mocha rspec
   cp config/email.example config/email.yml
   cp config/database.example config/database.yml
   
