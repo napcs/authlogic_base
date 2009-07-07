@@ -11,7 +11,7 @@ Scenario: Signing up to use the system
     And I press "Sign Up"
    Then I should receive an email
    When I open the email
-   Then I should see "Please activate your SocialBrokerage account" in the subject
+   Then I should see "Please activate your YOUR_APP account" in the subject
    When I click the first link in the email
    Then I should see "Almost done..."
    When I fill in "Password" with "homer_rocks"
@@ -28,7 +28,7 @@ Scenario: Signing up to use the system
       And I press "Sign Up"
      Then I should receive an email
      When I open the email
-     Then I should see "Please activate your SocialBrokerage account" in the subject
+     Then I should see "Please activate your YOUR_APP account" in the subject
      When I click the first link in the email
      Then I should see "Almost done..."
      When I fill in "Password" with "homer_rocks"
