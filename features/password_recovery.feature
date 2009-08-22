@@ -7,8 +7,8 @@ Scenario: Recovering password
    Given I have signed up as a user
     When I go to the home page
      And I click "Recover your password"
-     And I fill in "Email" with "user@socialbrokerage.com"
-     And my email address is "user@socialbrokerage.com"
+     And I fill in "Email" with "user@example.com"
+     And my email address is "user@example.com"
      And I press "Reset my password"
     Then I should receive an email
     When I open the email

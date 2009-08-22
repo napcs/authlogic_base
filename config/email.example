@@ -17,4 +17,4 @@ test:
   web_host: localhost:3000
   email:
     delivery_method: test
-    site_admin_email: bphogan@gmail.com
+    site_admin_email: foo@gmail.com

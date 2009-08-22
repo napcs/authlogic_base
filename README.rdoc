@@ -29,16 +29,7 @@ to the site admin's email. This is where things like "contact us for support" fo
 Run the tests
 
   rake spec
-  cucumber
-  
-=Selenium tests
-Install Selenium to test advanced user interface features which use Javascript
-
-  sudo gem install Selenium
-  sudo gem install selenium-client -v 1.2.15
-  
-  cucumber -p selenium
-  
+  cucumber features  
 
 = The Bootstrap rake task
 
