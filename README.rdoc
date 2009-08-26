@@ -2,15 +2,33 @@
 
 == Setup
 
+Gems are managed via the dependencies in config/environment.rb
+
+  sudo gem install mocha
+  sudo rake gems:install
+  sudo rake RAILS_ENV="test" gems:install
+
 === Database setup
 
+====SQLite3
+
+Not much to do here
+
+  cp config/database.sqlite.example config/database.yml
+
+Your database will be created when you run your migrations
+
+====MySQL
 Set up MySQL and set up root user with no password on your dev machine. Turn off MySQL when not using. This enables Rails to create databases automatically.  If you choose to set up your database any other way, you are on your own for creating the databases listed in the example yml file.
   
-  gem install mocha rspec
-  cp config/email.example config/email.yml
   cp config/database.example config/database.yml
-  
+
 == Email setup
+
+Copy the email configuration template:
+
+   cp config/email.example config/email.yml
+
 Open config/email.yml and change
 
   WEB_HOST
@@ -23,6 +41,9 @@ Change
   
 to the site admin's email. This is where things like "contact us for support" forms should go
 
+
+== Create the databases and load the default roles
+
   rake db:create:all
   rake db:bootstrap
   
@@ -31,6 +52,6 @@ Run the tests
   rake spec
   cucumber features  
 
-= The Bootstrap rake task
+=== The Bootstrap rake task
 
 Right now the bootstrap task creates the "user" role and the "admin" role, prompts you for admin user info, creates the user, and then adds the "admin" role to the user. Modify for your own uses.
