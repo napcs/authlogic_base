@@ -5,7 +5,7 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_socialbrokerage_session',
+  :key         => '_your_app_session',
   :secret      => '30595c48eacf7cf9c59fedb3a95b6e2e2f2281dadc2657df54fbf0105895894a7f54b884058786126a6355a20e53496737679c4a0925845e68800e499c3f74aa'
 }
 

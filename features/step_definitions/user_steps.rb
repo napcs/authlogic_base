@@ -12,7 +12,7 @@ Given /^a (.*) is logged in$/  do |role|
   Given 'a ' + role + ' is signed up'
     And 'I go to the home page'
     And 'I fill in "Login" with "' + role + '"'
-    And 'I fill in "Password" with "railsmentors"'
+    And 'I fill in "Password" with "password"'
     And 'I press "Log In"'
 end
 
@@ -31,7 +31,7 @@ Given /^I am logged in as a (.*)/ do |role|
   Given 'I have signed up as a ' + role
     And 'I go to the home page'
     And 'I fill in "Login" with "' + role + '"'
-    And 'I fill in "Password" with "railsmentors"'
+    And 'I fill in "Password" with "password"'
     And 'I press "Log In"'
     Then 'I should see "Login successful!"'
 end

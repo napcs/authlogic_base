@@ -12,7 +12,7 @@ class ActivationsController < ApplicationController
  
     if @user.activate!(params)
       @user.deliver_activation_confirmation!
-      flash[:notice] = "Your account has been activated. Welcome to Rails Mentors!"
+      flash[:notice] = "Your account has been activated."
       redirect_to dashboard_path
     else
       render :action => :new
