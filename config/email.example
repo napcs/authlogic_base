@@ -13,8 +13,11 @@ production:
     server: smtp.gmail.com
     site_admin_email: foo@gmail.com
     password: 
-test:
+test: &TEST
   web_host: localhost:3000
   email:
     delivery_method: test
     site_admin_email: foo@gmail.com
+
+cucumber:
+  <<: *TEST
