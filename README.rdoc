@@ -51,6 +51,23 @@ Run the tests
 
   rake spec
   cucumber features  
+  
+=== Selenium support
+
+If you have Selenium installed, you can tag specific Cucumber features to run by tagging them with
+
+  @selenium
+  
+Install selenium-client gem
+
+  sudo gem install selenium-client
+  
+And then run the stories that require Selenium.
+
+  cucumber -p selenium features
+  
+Selenium is SLOW, so only run stories that require Javascript/Ajax in order to work.
+
 
 === The Bootstrap rake task
 
