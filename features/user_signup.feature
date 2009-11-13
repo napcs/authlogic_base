@@ -1,6 +1,6 @@
 Feature: User Signup
-  In order to use Social Brokerage
-  As an interested organizer or merchant
+  In order to use this application
+  As an interested customer
   I want to sign up
   
 Scenario: Signing up to use the system
