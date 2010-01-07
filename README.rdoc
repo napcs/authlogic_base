@@ -75,3 +75,19 @@ Selenium is SLOW, so only run stories that require Javascript/Ajax in order to w
 === The Bootstrap rake task
 
 Right now the bootstrap task creates the "user" role and the "admin" role, prompts you for admin user info, creates the user, and then adds the "admin" role to the user. Modify for your own uses.
+
+== Changelog
+
+2010-01-07 
+  * Updated for newest cucumber and rspec
+  
+2009-12-03
+  * Updated to work with Rails 2.3.5
+
+2009-11-14
+  * Fixed selenium bug
+  
+2009-11-01
+  * Added Selenium support
+  
+2009-10-01 Updated to Rails 2.3.4
