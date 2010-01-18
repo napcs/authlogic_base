@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title= "#{@title} | YOUR APP"
+  	%meta{:http_equiv => "Content-Type", :content=>"text/html; charset=utf-8"}
+    %meta{:name=>"keywords", :content=>""}
+  	%meta{:name=>"description", :content=>""}
+  	=stylesheet_link_tag "style.css"
+		
+  %body
+    #page
+      #banner
+        %h1 Your site
+      #main
+        -if flash[:notice].present?
+          #notice
+            =flash[:notice]
+        = yield
