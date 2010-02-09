@@ -26,10 +26,8 @@ namespace :db do
     
   end
   
-
-  
   task :add_roles => :environment do
-    ["admin","organizer","merchant"].each do |role|
+    ["admin","user"].each do |role|
       puts "Adding '#{role}'"
       Role.find_or_create_by_name(role)
     end

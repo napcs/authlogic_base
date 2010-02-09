@@ -6,6 +6,7 @@ development:
 production:
   web_host: localhost:3000
   email:
+    tls: true
     delivery_method: smtp
     domain: example.com
     port: 587

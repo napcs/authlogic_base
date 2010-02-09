@@ -37,7 +37,7 @@ describe User do
       @user.should_not be_active
     end
     
-    it "should not be a mentor" do
+    it "should not be an admin" do
       @user.should_not have_role("admin")
     end
     

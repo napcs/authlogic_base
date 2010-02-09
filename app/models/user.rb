@@ -1,7 +1,5 @@
 #=User
 # A user can take on many roles depending on the circumstances.
-#==Admin
-# A user with the admin role is an admin and can approve MentorRequests.
 
 class User < ActiveRecord::Base
   
@@ -32,7 +30,7 @@ class User < ActiveRecord::Base
   
   # Adds a role to the user by name
   #
-  # user.add_role("mentor")
+  # user.add_role("admin")
   def add_role(role)
     return if self.has_role?(role)
     self.roles << Role.find_by_name(role)

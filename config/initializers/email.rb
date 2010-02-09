@@ -11,7 +11,7 @@ if File.exists? "#{RAILS_ROOT}/config/email.yml"
     ActionMailer::Base.delivery_method = :smtp
 
     ActionMailer::Base.smtp_settings = {
-      :tls => true,
+      :tls => c[RAILS_ENV]['email']['tls'],
       :address  => c[RAILS_ENV]['email']['server'], 
       :port  => c[RAILS_ENV]['email']['port'], 
       :domain => c[RAILS_ENV]['email']['domain'],
@@ -35,7 +35,7 @@ else
   else
     ActionMailer::Base.delivery_method = :smtp
     ActionMailer::Base.smtp_settings = {
-      :tls => true,
+      :tls => ENV['SMTP_TLS'],
       :address  => ENV['SMTP_SERVER'], 
       :port  => ENV['SMTP_PORT'], 
       :domain => ENV['SMTP_DOMAIN'],
