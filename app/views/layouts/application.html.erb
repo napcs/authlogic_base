@@ -16,7 +16,10 @@
     <div id="page">
       
   		<div id="banner">
-
+  		  <h1>Your App</h1>
+  		</div>
+  		
+      <div id="main">
         <% unless flash[:notice].blank? %>
           <div id="notice">
             <%= flash[:notice] %>
@@ -24,7 +27,11 @@
         <% end %>
       
       <%=yield%>
-        
+      </div>
+      
+      <div id="footer">
+        <h4>&copy; <%=Date.today.year %></h4>
+      </div>
     </div>
 
   </body>
