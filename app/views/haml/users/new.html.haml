@@ -4,6 +4,8 @@
 %h3 Tip: 
 %p Use the same login name you use for Twitter. It'll make it easier for people to get in contact with you!
 - form_for @user do |f|
+  =error_messages_for :user
+
   .row
     = f.label :login
     %br

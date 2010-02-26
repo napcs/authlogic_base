@@ -1,6 +1,6 @@
 - unless current_user
   %h2 Sign in
+  = render :partial => "user_sessions/form"
   %p 
     Don't have an account?
     =link_to "Sign up", signup_path
-
