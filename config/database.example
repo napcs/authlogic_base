@@ -49,3 +49,6 @@ production:
 
 cucumber:
   <<: *TEST
+  
+selenium:
+  <<: *TEST
