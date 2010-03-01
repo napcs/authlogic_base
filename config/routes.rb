@@ -7,6 +7,9 @@ ActionController::Routing::Routes.draw do |map|
   #map.resource :profile  
   map.resource :dashboard, :controller => "dashboard"
   
+  map.namespace :admin do |a|
+    a.resources :users, :member => {:make_admin => :put, :remove_admin => :put}
+  end
   
   map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
   map.activate '/activate/:id', :controller => 'activations', :action => 'create'

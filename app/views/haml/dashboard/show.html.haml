@@ -1,3 +1,8 @@
 -@title = "Dashboard"
 %h2=@title
 =link_to "Update your account details", edit_user_path(@user)
+
+-if current_user.admin?
+  %h2 Admin links
+  %ul
+    %li=link_to "Manage users", admin_users_path

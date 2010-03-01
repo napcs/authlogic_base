@@ -1,0 +1,11 @@
+-@title = "New account"
+%h2=@title
+- form_for(@user, :url=>admin_users_path, :method => :post) do |f|
+  = error_messages_for :user
+  %p
+    = f.label :login
+    %br
+    = f.text_field :login
+    = render :partial => "form", :locals => {:f => f}
+    = submit_tag "Create and activate this account", :class => "submit"
+    

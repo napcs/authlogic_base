@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
   has_many :user_roles, :dependent => :destroy
   has_many :roles, :through => :user_roles
   
+  named_scope :active, :conditions => {:active => true}
+  named_scope :inactive, :conditions => {:active => false}
+  
   #delegate :name, :to => :profile
   
   attr_accessible :login, :email, :password, :password_confirmation
@@ -34,6 +37,20 @@ class User < ActiveRecord::Base
   def add_role(role)
     return if self.has_role?(role)
     self.roles << Role.find_by_name(role)
+  end
+  
+  def remove_role(role)
+    return false unless self.has_role?(role)
+    role = Role.find_by_name(role)
+    self.roles.delete(role)
+  end
+  
+  def make_admin
+    add_role("admin")
+  end
+  
+  def remove_admin
+    remove_role("admin")
   end
   
   # User creation/activation

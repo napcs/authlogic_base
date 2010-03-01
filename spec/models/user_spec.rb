@@ -66,6 +66,21 @@ describe User do
       u.roles.length.should == 1
     end
     
+    it "should make an admin" do
+      u = Factory.create :active_user
+      Factory.create(:admin_role)
+      u.make_admin
+      u.should have_role("admin")
+    end
+    
+    it "should remove admin role" do
+      u = Factory.create :admin
+      u.should have_role("admin")
+      u.remove_admin
+      u.reload
+      u.should_not have_role("admin")
+    end
+    
   end
 
 

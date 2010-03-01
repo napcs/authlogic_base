@@ -1,0 +1,28 @@
+<h1>Active Users</h1>
+
+<p><%=link_to "New user", new_admin_user_path %></p>
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+    <th>Created at</th>
+    <th colspan="3">&nbsp;</th>
+  </tr>
+<% @users.each do |u|%>
+  <tr>
+    <td><%= u.login %></td>
+    <td><%= u.email %></td>
+    <td><%= u.created_at %></td>
+    <td><%= link_to "Show", admin_user_path(u)%></td>
+    <td><%= link_to "Edit", edit_admin_user_path(u), :method => :put%></td>
+    <td>
+      <% if u.admin? %>
+        <%= link_to "Remove admin", remove_admin_admin_user_path(u), :method => :put%>
+      <% else %>
+        <%= link_to "Make admin", make_admin_admin_user_path(u), :method => :put %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
