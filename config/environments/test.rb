@@ -35,4 +35,4 @@ config.gem "factory_girl",
            :lib    => "factory_girl",
            :version => "=1.2.3"
 
-config.gem "fakeweb", :version => "= 1.2.3"
+config.gem "fakeweb", :version => "= 1.2.8"
