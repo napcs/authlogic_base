@@ -25,12 +25,12 @@ class Admin::UsersController < ApplicationController
   
   def make_admin
     @user.make_admin
-    redirect_to users_path
+    redirect_to admin_users_path
   end
   
   def remove_admin
     @user.remove_admin
-    redirect_to users_path
+    redirect_to admin_users_path
   end
   
   def create

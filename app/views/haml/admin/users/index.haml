@@ -23,10 +23,10 @@
       %td
         = link_to "Show", admin_user_path(u)
       %td
-        = link_to "Edit", edit_admin_user_path(u), :method => :put
+        = link_to "Edit", edit_admin_user_path(u)
       %td
         - if u.admin?
-          = link_to "Remove admin", remove_admin_admin_user_path(u), :method => :put
+          = link_to "Remove Admin", remove_admin_admin_user_path(u), :method => :put
         - else
-          = link_to "Make admin", make_admin_admin_user_path(u), :method => :put
+          = link_to "Make Admin", make_admin_admin_user_path(u), :method => :put
 

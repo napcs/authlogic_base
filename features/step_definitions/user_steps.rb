@@ -47,16 +47,16 @@ Given /^I have signed up as a (.*)$/ do |role|
   end
 end
 
+
+
 def get_type(role)
   type = case role.strip
        when "user"
          :active_user
        when "admin"
          :admin
-       when "organizer"
-         :organizer
-       when "merchant"
-         :merchant
-       end 
+       end
   type
 end
+
+
