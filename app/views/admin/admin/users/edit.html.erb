@@ -1,6 +1,0 @@
-  <h2>Edit account</h2>
-
-  <% form_for(@user, :url=>admin_users_path, :method => :put) do |f| %>
-    <%= render :partial => "form", :locals => {:f => f} %>
-    <%=submit_tag "Edit this account", :class => "submit" %>
-  <% end %>
