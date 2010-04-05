@@ -1,3 +1,6 @@
+== Authlogic_Base
+This is a starter app for my Rails projects that has all of the usual user setup stuff in place. You can follow these instructions to get everything set up, but then you can just modify this readme for your own apps.
+
 == YOUR_APP_NAME app
 
 == Setup
@@ -77,6 +80,8 @@ Selenium is SLOW, so only run stories that require Javascript/Ajax in order to w
 Right now the bootstrap task creates the "user" role and the "admin" role, prompts you for admin user info, creates the user, and then adds the "admin" role to the user. Modify for your own uses.
 
 == Changelog
+2010-04-01
+ * Cuke upgrades to latest, added in code for admin management of users
 
 2010-01-07 
   * Updated for newest cucumber and rspec
