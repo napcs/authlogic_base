@@ -27,12 +27,15 @@ config.action_mailer.delivery_method = :test
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
 
-config.gem "webrat",      :lib => false,        :version => ">=0.7.0" unless File.directory?(File.join(Rails.root, 'vendor/plugins/webrat'))
-config.gem 'rspec',            :lib => false, :version => '>=1.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec'))
-config.gem 'rspec-rails',      :lib => false, :version => '>=1.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
+config.gem "webrat",      :lib => false,        :version => "=0.7.1" unless File.directory?(File.join(Rails.root, 'vendor/plugins/webrat'))
+config.gem 'rspec',            :lib => false, :version => '=1.3.0' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec'))
+config.gem 'rspec-rails',      :lib => false, :version => '=1.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/rspec-rails'))
+
+config.gem "mocha", :lib => false, :version => "=0.9.8"
 
 config.gem "factory_girl",
            :lib    => "factory_girl",
-           :version => "=1.2.3"
+           :version => "=1.3.2"
 
-config.gem "fakeweb", :version => "= 1.2.8"
+config.gem "fakeweb", :version => "= 1.3.0"
+
