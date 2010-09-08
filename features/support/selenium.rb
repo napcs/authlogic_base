@@ -4,7 +4,7 @@ Webrat.configure do |config|
   config.application_framework = :rails
   config.application_address = "localhost" 
    config.application_port = "3001"
-   config.selenium_browser_startup_timeout = 20
+   config.selenium_browser_startup_timeout = 30
 
 end
 World(Webrat::Selenium::Matchers)

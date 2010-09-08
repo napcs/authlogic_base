@@ -1,9 +1,10 @@
 == Authlogic_Base
-This is a starter app for my Rails projects that has all of the usual user setup stuff in place. You can follow these instructions to get everything set up, but then you can just modify this readme for your own apps.
+This is a starter app for my Rails projects that has all of the usual user setup stuff in place. You can follow these instructions to get everything set up, and then you can just modify this readme for your own apps.
 
 == YOUR_APP_NAME app
 
 == Setup
+Getting the application set up on your development machine involves a few steps, but it's worth the effort.
 
 === Database setup
 
@@ -24,9 +25,9 @@ Set up MySQL and set up root user with no password on your dev machine. Turn off
 
 Gems are managed via the dependencies in config/environment.rb
 
-  sudo gem install mocha
   sudo rake gems:install
   sudo rake RAILS_ENV="test" gems:install
+  sudo rake RAILS_ENV="cucumber" gems:install
 
 
 == Email setup
@@ -58,7 +59,7 @@ Run the tests
   rake spec
   cucumber features  
   
-=== Selenium support
+=== Selenium support (not working with firefox 3.6 atm)
 
 If you have Selenium installed, you can tag specific Cucumber features to run by tagging them with
 
@@ -66,7 +67,7 @@ If you have Selenium installed, you can tag specific Cucumber features to run by
   
 Install selenium-client gem
 
-  sudo gem install selenium-client
+  sudo gem install selenium-client mongrel
   
 And then run the stories that require Selenium.
 
